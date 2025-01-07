@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/git/oh-my-zsh"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -20,11 +20,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # Which plugins would you like to load?
 plugins=(tmuxinator)
 
+bindkey -v
+
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/git/powerlevel10k/powerlevel10k.zsh-theme
 # User configuration
-bindkey -v
 
 export EDITOR='nvim'
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
