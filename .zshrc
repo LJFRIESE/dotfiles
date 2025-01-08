@@ -18,7 +18,7 @@ export ZSH="$HOME/git/oh-my-zsh"
 # DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load?
-plugins=(tmuxinator)
+plugins=()
 
 bindkey -v
 
