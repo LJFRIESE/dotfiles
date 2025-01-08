@@ -15,6 +15,6 @@
     stripComponents = 1
 ["git/zsh-autocomplete"]
 	type = "archive"
-	url = "https://github.com/marlonrichert/zsh-autocomplete"
+	url = "https://github.com/marlonrichert/zsh-autocomplete/archive/main.tar.gz"
 	exact = true
 	stripComponents = 1
