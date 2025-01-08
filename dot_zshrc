@@ -10,13 +10,8 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/git/.oh-my-zsh"
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
+# Hide the ugly compdump files away
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
