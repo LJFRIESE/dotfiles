@@ -1,4 +1,0 @@
-[*]
-
-[*sql]
-vim.bo.commentstring = "/*%s*/"
