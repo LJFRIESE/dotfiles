@@ -40,7 +40,11 @@ export EDITOR='nvim'
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-# export WORK="$HOME/../../mnt/c/Users/LUCASFRI/"
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+export WORK="$HOME/../../mnt/c/Users/LUCASFRI/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
