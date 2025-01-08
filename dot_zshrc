@@ -17,6 +17,9 @@ export ZSH="$HOME/git/.oh-my-zsh"
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+
+# Required so chezmoi does not drift out of date
+DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=()
 
