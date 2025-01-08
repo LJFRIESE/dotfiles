@@ -27,7 +27,7 @@ bindkey -v
 
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/git/powerlevel10k/powerlevel10k.zsh-theme
+source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # User configuration
 export export PATH="/snap/bin:$PATH"
