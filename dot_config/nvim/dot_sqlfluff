@@ -1,5 +1,0 @@
-[sqlfluff]
-dialect = oracle
-exclude_rules = L044
-[sqlfluff:rules:layout.select_targets]
-wildcard_policy = multiple
