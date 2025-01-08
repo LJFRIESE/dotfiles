@@ -27,14 +27,11 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 
 # ZSH
 sudo apt update
-sudo apt install zsh -y
+sudo apt install zsh
 # install oh-my-zsh to set zsh as default shell and install plugins
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## plugins
-### tmuxinator
-sudo wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
-
 ### PowerLevel
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/git/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
