@@ -17,9 +17,7 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
-plugins=()
-
-bindkey -v
+plugins=(zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
