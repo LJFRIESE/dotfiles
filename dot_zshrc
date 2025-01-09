@@ -1,13 +1,12 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH="/snap/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/git/.oh-my-zsh"
@@ -21,7 +20,6 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=() #zsh-vi-mode
 
-export EDITOR='nvim'
 
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -29,7 +27,10 @@ source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # vi mode
 bindkey -v
+
 # User configuration
+export PATH="/snap/bin:$PATH"
+export EDITOR='nvim'
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
