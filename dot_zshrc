@@ -14,6 +14,9 @@ export ZSH="$HOME/git/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
+export export PATH="/snap/bin:$PATH"
+export EDITOR='nvim'
+
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
@@ -27,8 +30,7 @@ plugins=() #zsh-vi-mode
 bindkey -v
 # User configuration
 
-export export PATH="/snap/bin:$PATH"
-export EDITOR='nvim'
+
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
