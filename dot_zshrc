@@ -13,6 +13,7 @@ fi
 export ZSH="$HOME/git/.oh-my-zsh"
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
