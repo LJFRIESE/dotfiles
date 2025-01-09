@@ -14,7 +14,6 @@ export ZSH="$HOME/git/.oh-my-zsh"
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
-export XDG_CONFIG_HOME="$HOME/.config"
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
