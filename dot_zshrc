@@ -5,7 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# testline
+source $ZSH/oh-my-zsh.sh
+source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -20,9 +22,6 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=(zsh-vi-mode)
 
-source $ZSH/oh-my-zsh.sh
-# source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # vi mode
 bindkey -v
