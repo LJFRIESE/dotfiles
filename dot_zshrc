@@ -24,6 +24,7 @@ bindkey -v
 source $ZSH/oh-my-zsh.sh
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
