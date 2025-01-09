@@ -23,7 +23,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=() #zsh-vi-mode
 
 # vi mode
-# bindkey -v
+bindkey -v
 # User configuration
 
 export export PATH="/snap/bin:$PATH"
