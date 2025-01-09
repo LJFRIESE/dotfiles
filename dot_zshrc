@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source $ZSH/oh-my-zsh.sh
-source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -16,6 +13,10 @@ export ZSH="$HOME/git/.oh-my-zsh"
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH_THEME="powerlevel10k/powerlevel10k"
+
+source $ZSH/oh-my-zsh.sh
+source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
