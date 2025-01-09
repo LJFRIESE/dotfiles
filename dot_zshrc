@@ -10,11 +10,12 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/git/.oh-my-zsh"
+export PATH="/snap/bin:$PATH"
+
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export export PATH="/snap/bin:$PATH"
 export EDITOR='nvim'
 
 source $ZSH/oh-my-zsh.sh
