@@ -41,6 +41,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+export TERM="screen-256color"
 export WORK="$HOME/../../mnt/c/Users/LUCASFRI/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
