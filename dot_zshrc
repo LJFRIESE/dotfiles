@@ -44,6 +44,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Convenience for Chezmoi
 alias cm="chezmoi"
 alias cme="chezmoi edit --apply"
 
