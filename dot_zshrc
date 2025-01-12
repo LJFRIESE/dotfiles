@@ -54,7 +54,7 @@ if [[ $USER == "LUCASFRI" ]]; then
     # in etc/fstab
     # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
     export MDRIVE="../../mnt/m"
-elif [[ $USER == "LUCAS" ]]; then
+elif [[ $USER == "ljfriese" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
 
