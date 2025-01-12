@@ -3,16 +3,22 @@
     url = "git@github.com:LJFRIESE/nvim.git"
     refreshPeriod = "1h"
 ["git/oh-my-tmux"]
-    type = "git-repo"
-    url = "https://github.com/gpakosz/.tmux.git"
+    type = "archive"
+    url = "https://github.com/gpakosz/.tmux/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
 ["git/.oh-my-zsh"]
     type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
     exact = true
     stripComponents = 1
 ["git/.oh-my-zsh/custom/themes/powerlevel10k"]
-    type = "git-repo"
-    url = "https://github.com/romkatv/powerlevel10k.git"
+    type = "archive"
+    url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
+    exact = true
+    stripComponents = 1
 ["git/zsh-autocomplete"]
-	type = "git-repo"
-	url = "https://github.com/marlonrichert/zsh-autocomplete.git"
+	type = "archive"
+	url = "https://github.com/marlonrichert/zsh-autocomplete/archive/main.tar.gz"
+	exact = true
+	stripComponents = 1
