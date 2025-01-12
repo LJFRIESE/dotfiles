@@ -2,3 +2,9 @@ README.md
 git/.oh-my-zsh/cache
 git/.oh-my-zsh/cache/**
 git/.oh-my-zsh/**/*.zwc
+
+{{- if or (eq .chezmoi.os "windows") }}
+# don't manage these files on work machines
+.config/nvim
+git/*
+{{- end }}
