@@ -1,24 +1,20 @@
 [".config/nvim"]
     type = "git-repo"
     url = "git@github.com:LJFRIESE/nvim.git"
-    refreshPeriod = "24h"
+    refreshPeriod = "1h"
 ["git/oh-my-tmux"]
-    type = "archive"
-    url = "https://github.com/gpakosz/.tmux/archive/master.tar.gz"
-    exact = true
+    type = "git-repo"
+    url = "https://github.com/gpakosz/.tmux"
     stripComponents = 1
 ["git/.oh-my-zsh"]
-    type = "archive"
-    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
-    exact = true
+    type = "git-repo"
+    url = "https://github.com/ohmyzsh/ohmyzsh"
     stripComponents = 1
 ["git/.oh-my-zsh/custom/themes/powerlevel10k"]
-    type = "archive"
-    url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
-    exact = true
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k"
     stripComponents = 1
 ["git/zsh-autocomplete"]
-	type = "archive"
-	url = "https://github.com/marlonrichert/zsh-autocomplete/archive/main.tar.gz"
-	exact = true
+	type = "git-repo"
+	url = "https://github.com/marlonrichert/zsh-autocomplete"
 	stripComponents = 1
