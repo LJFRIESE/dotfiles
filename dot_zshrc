@@ -46,13 +46,18 @@ alias l='ls -CF'
 
 
 export TERM="xterm-256color"
-export WINDOWS_A="$HOME/../../mnt/c/Users/LUCASFRI/"
-export WINDOWS_B="$HOME/../../mnt/c/Users/LUCAS/"
 
-# Mounting m has not been done in a persistent way yet. That should be doable with
-# M: /mnt/m drvfs defaults 0 0
-# in etc/fstab
-# To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
+if [[ $USER == "LUCASFRI" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
+    # Mounting m has not been done in a persistent way yet. That should be doable with
+    # M: /mnt/m drvfs defaults 0 0
+    # in etc/fstab
+    # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
+    export MDRIVE="../../mnt/m"
+elif [[ $USER == "LUCAS" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
+fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
