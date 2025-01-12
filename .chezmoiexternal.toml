@@ -6,9 +6,10 @@
     type = "git-repo"
     url = "https://github.com/gpakosz/.tmux.git"
 ["git/.oh-my-zsh"]
-    type = ""
+    type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
     exact = true
+    stripComponents = 1
 ["git/.oh-my-zsh/custom/themes/powerlevel10k"]
     type = "git-repo"
     url = "https://github.com/romkatv/powerlevel10k.git"
