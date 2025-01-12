@@ -4,17 +4,14 @@
     refreshPeriod = "1h"
 ["git/oh-my-tmux"]
     type = "git-repo"
-    url = "https://github.com/gpakosz/.tmux"
-    stripComponents = 1
+    url = "https://github.com/gpakosz/.tmux.git"
 ["git/.oh-my-zsh"]
-    type = "git-repo"
-    url = "https://github.com/ohmyzsh/ohmyzsh"
-    stripComponents = 1
+    type = ""
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
 ["git/.oh-my-zsh/custom/themes/powerlevel10k"]
     type = "git-repo"
-    url = "https://github.com/romkatv/powerlevel10k"
-    stripComponents = 1
+    url = "https://github.com/romkatv/powerlevel10k.git"
 ["git/zsh-autocomplete"]
 	type = "git-repo"
-	url = "https://github.com/marlonrichert/zsh-autocomplete"
-	stripComponents = 1
+	url = "https://github.com/marlonrichert/zsh-autocomplete.git"
