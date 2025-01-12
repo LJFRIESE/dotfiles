@@ -2,6 +2,10 @@
     type = "git-repo"
     url = "git@github.com:LJFRIESE/nvim.git"
     refreshPeriod = "1h"
+[".config/ahk"]
+    type = "git-repo"
+    url = "git@github.com:LJFRIESE/ahk.git"
+    refreshPeriod = "1h"
 ["git/oh-my-tmux"]
     type = "archive"
     url = "https://github.com/gpakosz/.tmux/archive/master.tar.gz"
