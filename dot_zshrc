@@ -44,8 +44,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias cm = "chezmoi"
-# alias cme = "chezmoi edit --apply"
+alias cm="chezmoi"
+alias cme="chezmoi edit --apply"
 
 export TERM="xterm-256color"
 
