@@ -50,14 +50,14 @@ alias cme="chezmoi edit --apply"
 
 export TERM="xterm-256color"
 
-if [[ $USER == "NH505053" ]]; then
+if [[ $NAME == "NH505053" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
     # Mounting m has not been done in a persistent way yet. That should be doable with
     # M: /mnt/m drvfs defaults 0 0
     # in etc/fstab
     # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
     export MDRIVE="../../2025-01-13mnt/m"
-elif [[ $NAME== "LittleLaptop" ]]; then
+elif [[ $NAME == "LittleLaptop" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
 
