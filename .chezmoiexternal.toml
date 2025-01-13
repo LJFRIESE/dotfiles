@@ -1,10 +1,10 @@
 [".config/nvim"]
     type = "git-repo"
-    url = "git@github.com:LJFRIESE/nvim.git"
+    url = "https://github.com/LJFRIESE/nvim.git"
     refreshPeriod = "1h"
 [".config/ahk"]
     type = "git-repo"
-    url = "git@github.com:LJFRIESE/ahk.git"
+    url = "https://github.com/LJFRIESE/ahk.git"
     refreshPeriod = "1h"
 ["git/oh-my-tmux"]
     type = "archive"
