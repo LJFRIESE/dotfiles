@@ -57,8 +57,8 @@ if [[ $NAME = "NH505053" ]]; then
     # in etc/fstab
     # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
     export MDRIVE="../../2025-01-13mnt/m"
-# elif [[ $NAME = "LittleLaptop" ]]; then
-#     export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
+elif [[ $NAME = "LittleLaptop" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
 
 
