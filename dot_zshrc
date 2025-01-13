@@ -26,7 +26,7 @@ source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # vi mode
-bindkey -v
+# bindkey -v
 
 # User configuration
 export PATH="/snap/bin:$PATH"
