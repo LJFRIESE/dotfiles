@@ -64,7 +64,7 @@ export TERM="xterm-256color"
 if [[ $NAME = "NH505053" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
     export MDRIVE="../../2025-01-13mnt/m"
-elif [[ $NAME = "LittleLaptop" ]]; then
+elif [[ $NAME = 'LittleLaptop' ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
 
