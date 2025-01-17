@@ -28,6 +28,6 @@
     stripComponents = 1
 ["git/zsh-suggestions"]
 	type = "archive"
-	url = "https://github.com/zsh-users/zsh-suggestions/archive/main.tar.gz"
+	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/main.tar.gz"
 	exact = true
 	stripComponents = 1
