@@ -19,7 +19,10 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
-plugins=(zsh-vi-mode, zsh-autosuggestions)
+plugins=(
+    zsh-vi-mode
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/git/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
