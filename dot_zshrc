@@ -57,7 +57,7 @@ if [[ $NAME = "NH505053" ]]; then
     # M: /mnt/m drvfs defaults 0 0
     # in etc/fstab
     # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
-    export MDRIVE="../../2025-01-13mnt/m"
+    export MDRIVE="../../mnt/m"
 elif [[ $NAME = "LittleLaptop" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
