@@ -28,8 +28,8 @@ source $ZSH/oh-my-zsh.sh
 # source ~/git/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^y' autosuggest-execute
 
-# vi mode
-# bindkey -v
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # User configuration
 export PATH="/snap/bin:$PATH"
