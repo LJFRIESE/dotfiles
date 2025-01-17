@@ -14,20 +14,16 @@ export ZSH="$HOME/git/.oh-my-zsh"
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH_THEME="powerlevel10k/powerlevel10k"
+# source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # Required so chezmoi does not drift out of date
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
-plugins=(zsh-vi-mode, zsh-autosuggestions, zsh-syntax-highlighting)
-
+plugins=(zsh-vi-mode, zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/git/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 bindkey '^y' autosuggest-execute
-
-# source ~/git/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/git/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # vi mode
 # bindkey -v
