@@ -20,7 +20,7 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=(
-    zsh-vi-mode
+    # zsh-vi-mode
     zsh-autosuggestions
 )
 
