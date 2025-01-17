@@ -26,8 +26,8 @@
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
     exact = true
     stripComponents = 1
-["git/zsh-suggestions"]
+["git/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	type = "archive"
-	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/main.tar.gz"
+	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
 	exact = true
 	stripComponents = 1
