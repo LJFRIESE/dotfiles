@@ -26,11 +26,6 @@
     url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
     exact = true
     stripComponents = 1
-["git/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
-	type = "archive"
-	url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
-	exact = true
-	stripComponents = 1
 ["git/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	type = "archive"
 	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
