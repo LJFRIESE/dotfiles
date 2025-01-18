@@ -75,7 +75,7 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory" # --type from f
 
 # ripgrep->fzf->vim [QUERY]
 # Preview
-rgv() (
+rgp() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
             vim {1} +{2}     # No selection. Open the current line in Vim.
@@ -95,7 +95,7 @@ rgv() (
 
 # ripgrep->fzf->vim [QUERY]
 # No preview
-rgv() (
+rgf() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
             vim {1} +{2}     # No selection. Open the current line in Vim.
