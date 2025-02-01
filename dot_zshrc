@@ -71,7 +71,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Tell fzf to use fd, not the default find
-let $FZF_DEFAULT_COMMAND = 'fd --type f --color=always'
+export $FZF_DEFAULT_COMMAND="fd --type f --color=always' --exclude .git --ignore-file ~/.gitignore"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory" # --type from fd
 
