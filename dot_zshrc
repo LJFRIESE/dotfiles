@@ -80,6 +80,7 @@ alias fd='fdfind'
 export FZF_DEFAULT_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_CTRL_T_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_ALT_C_COMMAND="fdfind --type d ${FZF_FD_OPTS}"
+export FZF_COMPLETION_DIR_COMMANDS="cd tree"
 
 # https://thevaluable.dev/fzf-shell-integration/
 _fzf_compgen_path() {
