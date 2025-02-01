@@ -99,10 +99,10 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+# Find directories with files
 alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}'"
-
-# ----------------- RG/FZF GUI
-
+# Find files or directories with text
 # Switch between Ripgrep launcher mode (CTRL-R) and fzf filtering mode (CTRL-F)
 rgf() (
     rm -f /tmp/rg-fzf-{r,f}
