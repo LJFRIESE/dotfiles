@@ -79,15 +79,15 @@ fi
 alias fd='fdfind'
 export FZF_DEFAULT_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_CTRL_T_COMMAND="fdfind ${FZF_FD_OPTS}"
-export FZF_ALT_C_COMMAND="fdfind --type d ${FZF_FD_OPTS}"
+export FZF_ALT_C_COMMAND="fdfind --type d --preview 'tree -C {}' ${FZF_FD_OPTS}"
 
-#     https://thevaluable.dev/fzf-shell-integration/
+# https://thevaluable.dev/fzf-shell-integration/
 _fzf_compgen_path() {
     rg --files --glob "!.git" . "$1"
 }
 
 _fzf_compgen_dir() {
-    fd --type d --hidden --follow --exclude ".git" . "$1" --preview 'tree -C {}'
+    fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
 # Example of command-specific customization. If command == tree, do 'a', else ('*') do b
