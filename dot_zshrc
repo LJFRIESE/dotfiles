@@ -99,6 +99,8 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}' | fzf"
+
 # ----------------- RG/FZF GUI
 
 # Switch between Ripgrep launcher mode (CTRL-R) and fzf filtering mode (CTRL-F)
