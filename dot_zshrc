@@ -102,7 +102,7 @@ _fzf_comprun() {
 }
 
 # Find directories with files
-alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --height 40% --border 'rounded' --preview 'tree -C {}'"
+alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --height 40% --reverse --border 'rounded' --preview 'tree -C {}'"
 # Find files or directories with text
 # Switch between Ripgrep launcher mode (CTRL-R) and fzf filtering mode (CTRL-F)
 rgf() (
