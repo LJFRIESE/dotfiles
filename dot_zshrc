@@ -87,7 +87,7 @@ _fzf_compgen_path() {
 }
 
 _fzf_compgen_dir() {
-    fd --type d --hidden --follow --exclude ".git" . "$1" | fzf --preview 'tree -C {}' "$@"
+    fd --type d --hidden --follow --exclude ".git" --preview 'tree -C {}' . "$1"
 }
 
 # Example of command-specific customization. If command == tree, do 'a', else ('*') do b
