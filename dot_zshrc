@@ -100,7 +100,7 @@ rgp() (
 rgf() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
-            nvimvim {1} +{2}     # No selection. Open the current line in Vim.
+            nvim {1} +{2}     # No selection. Open the current line in Vim.
           else
             nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
@@ -117,7 +117,7 @@ rgf() (
 fdf() (
   RELOAD='reload:fd --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
-            nvimvim {1} +{2}     # No selection. Open the current line in Vim.
+            nvim {1} +{2}     # No selection. Open the current line in Vim.
           else
             nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
