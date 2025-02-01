@@ -45,6 +45,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias fd='fdfind'
+
 # Convenience for Chezmoi
 alias cm="chezmoi"
 alias cme="chezmoi edit --apply"
@@ -78,9 +80,9 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory" # --type from f
 rgp() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
-            vim {1} +{2}     # No selection. Open the current line in Vim.
+            nvim {1} +{2}     # No selection. Open the current line in Vim.
           else
-            vim +cw -q {+f}  # Build quickfix list for the selected items.
+            nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
   fzf --disabled --ansi --multi \
       --bind "start:$RELOAD" --bind "change:$RELOAD" \
@@ -98,9 +100,9 @@ rgp() (
 rgf() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
-            vim {1} +{2}     # No selection. Open the current line in Vim.
+            nvimvim {1} +{2}     # No selection. Open the current line in Vim.
           else
-            vim +cw -q {+f}  # Build quickfix list for the selected items.
+            nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
   fzf --disabled --ansi --multi \
       --bind "start:$RELOAD" --bind "change:$RELOAD" \
@@ -108,7 +110,22 @@ rgf() (
       --bind "ctrl-o:execute:$OPENER" \
       --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
       --delimiter : \
-      # --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
-      # --preview-window '~4,+{2}+4/3,<80(up)' \
+      --query "$*"
+)
+
+
+fdf() (
+  RELOAD='reload:fd --column --color=always --smart-case {q} || :'
+  OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
+            nvimvim {1} +{2}     # No selection. Open the current line in Vim.
+          else
+            nvim +cw -q {+f}  # Build quickfix list for the selected items.
+          fi'
+  fzf --disabled --ansi --multi \
+      --bind "start:$RELOAD" --bind "change:$RELOAD" \
+      --bind "enter:become:$OPENER" \
+      --bind "ctrl-o:execute:$OPENER" \
+      --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
+      --delimiter : \
       --query "$*"
 )
