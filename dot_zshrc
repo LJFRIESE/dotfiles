@@ -45,7 +45,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias fd='fdfind'
 
 # Convenience for Chezmoi
 alias cm="chezmoi"
@@ -70,11 +69,26 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Tell fzf to use fd, not the default find
-export FZF_DEFAULT_COMMAND="fd . $HOME"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+# 5x definition of command:
+# - Using it as a command
+# - Ctrl+T
+# - Alt+C
+# - cat **<Tab> # files and directories
+# - cd **<Tab> # directories
 
+alias fd='fdfind'
+FZF_FD_OPTS="--hidden --follow --exclude '.git'"
+export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+
+_fzf_compgen_path() {
+    fd ${FZF_FD_OPTS} . "${1}"
+}
+
+_fzf_compgen_dir() {
+    fd --type d ${FZF_FD_OPTS} . "${1}"
+}
 # ----------------- RG/FZF GUI
 
 # ripgrep->fzf->vim [QUERY]
