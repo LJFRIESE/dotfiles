@@ -90,19 +90,19 @@ _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-# Example of command-specific customization. If command == cd, do 'a', else ('*') do b
+# Example of command-specific customization. If command == tree, do 'a', else ('*') do b
 _fzf_comprun() {
   local command=$1
   shift
 
   case "$command" in
-    cd)         fd --type d --hidden --follow --exclude ".git" | fzf --preview 'tree -C {}' "$@";;
+    tree)         fd --type d --hidden --follow --exclude ".git" | fzf --preview 'tree -C {}' "$@";;
     *)            fzf "$@" ;;
   esac
 }
 
 # Find directories with files
-alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}'"
+alias fdf="fd --type d --height 40% --layout reverse --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}'"
 # Find files or directories with text
 # Switch between Ripgrep launcher mode (CTRL-R) and fzf filtering mode (CTRL-F)
 rgf() (
