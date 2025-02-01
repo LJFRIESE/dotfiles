@@ -95,7 +95,7 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    tree)         find . -type d | fzf --preview 'tree -C {}' "$@";;
+    tree)         fd . -type d --hidden --exclude ".git" | fzf --preview 'tree -C {}' "$@";;
     *)            fzf "$@" ;;
   esac
 }
