@@ -1,3 +1,7 @@
+# ---------------------
+# General ZSH config --
+# ---------------------
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -20,14 +24,10 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=(
-    # zsh-vi-mode
     zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
-# source ~/git/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^y' autosuggest-execute
-export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # User configuration
 export PATH="/snap/bin:$PATH"
@@ -45,12 +45,18 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
-# Convenience for Chezmoi
-alias cm="chezmoi"
-alias cme="chezmoi edit --apply"
-
 export TERM="xterm-256color"
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# -----------------------------
+# Workspace config variables --
+# -----------------------------
 
 if [[ $NAME = "NH505053" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
@@ -64,23 +70,34 @@ elif [[ $NAME = "LittleLaptop" ]]; then
 fi
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# -----------------------
+# zsh-autosuggestions ---
+# -----------------------
+# source ~/git/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey '^y' autosuggest-execute
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# 5x definition of command:
-# - Using it as a command
-# - Ctrl+T
-# - Alt+C
-# - cat **<Tab> # files and directories
-# - cd **<Tab> # directories
+# ----------
+# Chezmoi --
+# ----------
 
-alias fd='fdfind'
+alias cm="chezmoi"
+alias cme="chezmoi edit --apply"
+
+
+# ----------
+# FZF/FD  --
+# ----------
+
 export FZF_DEFAULT_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_CTRL_T_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_ALT_C_COMMAND="fdfind --type d ${FZF_FD_OPTS}"
 export FZF_COMPLETION_TRIGGER=''
+
+alias fd='fdfind'
+# Find directories with files
+alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --height 40% --reverse --border 'rounded' --border-label ' TAB (Multi) | CTRL-N/P (Nav) ' --preview 'tree -C {}'"
 
 # https://thevaluable.dev/fzf-shell-integration/
 _fzf_compgen_path() {
@@ -102,8 +119,12 @@ _fzf_comprun() {
   esac
 }
 
-# Find directories with files
-alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --height 40% --reverse --border 'rounded' --border-label ' TAB (Multi) | CTRL-N/P (Nav) ' --preview 'tree -C {}'"
+
+
+# ----------
+# Ripgrep --
+# ----------
+
 # Find files or directories with text
 # Switch between Ripgrep launcher mode (CTRL-R) and fzf filtering mode (CTRL-F)
 rgf() (
