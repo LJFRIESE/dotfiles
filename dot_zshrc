@@ -99,7 +99,7 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
-alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}' | fzf"
+alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --preview 'tree -C {}'"
 
 # ----------------- RG/FZF GUI
 
