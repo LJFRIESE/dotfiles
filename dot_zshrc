@@ -108,14 +108,14 @@ _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
-# Example of command-specific customization. If command == tree, do 'a', else ('*') do b
+# Command-specific customization. If command == tree, do 'a', else ('*') do b
 _fzf_comprun() {
   local command=$1
   shift
 
   case "$command" in
     tree)         fd --type d --hidden --follow --exclude ".git" | fzf --preview 'tree -C {}' "$@";;
-    ls)           ls | fzf --preview 'tree -C {}' "$@";;
+    ls)           ls -R | fzf --preview 'tree -C {}' "$@";;
     *)            fzf "$@" ;;
   esac
 }
