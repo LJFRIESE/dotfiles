@@ -27,6 +27,8 @@ plugins=(
     zsh-autosuggestions
     fzf-tab
 )
+source $ZSH/oh-my-zsh.sh
+
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
@@ -47,7 +49,6 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PATH="/snap/bin:$PATH"
