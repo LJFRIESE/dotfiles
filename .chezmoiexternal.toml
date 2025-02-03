@@ -16,9 +16,9 @@
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
     exact = true
     stripComponents = 1
-["git/.oh-my-zsh/custom/plugins/zsh-vi-mode"]
+["git/.oh-my-zsh/custom/plugins/fzf-tab"]
     type = "archive"
-    url = "https://github.com/jeffreytse/zsh-vi-mode/archive/master.tar.gz"
+    url = "https://github.com/Aloxaf/fzf-tab/archive/master.tar.gz"
     exact = true
     stripComponents = 1
 ["git/.oh-my-zsh/custom/themes/powerlevel10k"]
