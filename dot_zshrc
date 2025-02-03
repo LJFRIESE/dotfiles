@@ -25,6 +25,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load?
 plugins=(
     zsh-autosuggestions
+    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
