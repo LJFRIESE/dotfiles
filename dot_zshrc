@@ -116,7 +116,7 @@ export FZF_CTRL_T_COMMAND="fdfind ${FZF_FD_OPTS}"
 export FZF_ALT_C_COMMAND="fdfind --type d ${FZF_FD_OPTS}"
 
 alias fd='fdfind'
-# Find directories with files
+# Find directories, show tree with files
 alias fdf="fd --type d --hidden --follow --exclude '.git' | fzf --height 40% --reverse --border 'rounded' --border-label ' TAB (Multi) | CTRL-N/P (Nav) ' --preview 'tree -C {}'"
 
 # https://thevaluable.dev/fzf-shell-integration/
@@ -138,8 +138,6 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
-
-
 
 # ----------
 # Ripgrep --
