@@ -14,20 +14,28 @@ export ZSH="$HOME/git/.oh-my-zsh"
 # Hide the ugly compdump files away
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
+# Theme
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Required so chezmoi does not drift out of date
-DISABLE_AUTO_UPDATE="true"
-# Which plugins would you like to load?
-plugins=(
-    zsh-autosuggestions
-    fzf-tab
-)
-source $ZSH/oh-my-zsh.sh
+
+# -------------------
+# Workspace config --
+# -------------------
+
+if [[ $NAME = "NH505053" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
+    # Mounting m has not been done in a persistent way yet. That should be doable with
+    # M: /mnt/m drvfs defaults 0 0
+    # in etc/fstab
+    # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
+    export MDRIVE="../../mnt/m"
+elif [[ $NAME = "LittleLaptop" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
+fi
 
 # --------------
 # User config --
@@ -46,9 +54,31 @@ alias la='ls -A'
 alias l='ls -CF'
 
 export TERM="xterm-256color"
+
+# ----------
+# Chezmoi --
+# ----------
+
+alias cm="chezmoi"
+alias cme="chezmoi edit --apply"
+# Required so chezmoi does not drift out of date
+DISABLE_AUTO_UPDATE="true"
+# Which plugins would you like to load?
+
+# ----------
+# Plugins --
+# ----------
+
+plugins=(
+    zsh-autosuggestions
+    fzf-tab
+)
+source $ZSH/oh-my-zsh.sh
+
 #-----------
 # fzf-tab --
 # ----------
+
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
@@ -69,26 +99,6 @@ zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' popup-min-size 50 8
 
 
-
-
-
-
-# -----------------------------
-# Workspace config variables --
-# -----------------------------
-
-if [[ $NAME = "NH505053" ]]; then
-    export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
-    # Mounting m has not been done in a persistent way yet. That should be doable with
-    # M: /mnt/m drvfs defaults 0 0
-    # in etc/fstab
-    # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
-    export MDRIVE="../../mnt/m"
-elif [[ $NAME = "LittleLaptop" ]]; then
-    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
-fi
-
-
 # -----------------------
 # zsh-autosuggestions ---
 # -----------------------
@@ -96,14 +106,6 @@ fi
 
 bindkey '^y' autosuggest-execute
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# ----------
-# Chezmoi --
-# ----------
-
-alias cm="chezmoi"
-alias cme="chezmoi edit --apply"
-
 
 # ----------
 # FZF/FD  --
