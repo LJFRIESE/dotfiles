@@ -26,15 +26,15 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 # Workspace config --
 # -------------------
 
-if [[ $NAME = "NH505053" ]]; then
+if [[ $NAME = "LittleLaptop" ]]; then
+    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
+else [[ $NAME = "" ]]; then
     export WINHOME="$HOME/../../mnt/c/Users/LUCASFRI/"
     # Mounting m has not been done in a persistent way yet. That should be doable with
     # M: /mnt/m drvfs defaults 0 0
     # in etc/fstab
     # To mount it ad hoc, use: sudo mount -t drvfs M: /mnt/m
     export MDRIVE="../../mnt/m"
-elif [[ $NAME = "LittleLaptop" ]]; then
-    export WINHOME="$HOME/../../mnt/c/Users/LUCAS/"
 fi
 
 # --------------
