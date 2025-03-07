@@ -115,8 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [[ $OSTYPE == "gnu-linux" ]]
+    . "$HOME/.cargo/env"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
