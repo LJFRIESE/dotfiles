@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# OS specific features
 if [[ $OSTYPE == "gnu-linux" ]]
     . "$HOME/.cargo/env"
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
