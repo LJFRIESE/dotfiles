@@ -122,5 +122,6 @@ if [ $OSTYPE == "gnu-linux" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+export KOMOREBI_AHK_EXE="C:\Users\LUCASFRI\AppData\Local\Programs\AutoHotkey\v2"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
